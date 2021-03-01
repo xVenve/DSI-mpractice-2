@@ -8,7 +8,7 @@ import { Car } from './car';
 })
 export class AppComponent {
   title = 'Concesionario';
-  brandToFilter = "";
+  brandToFilter = '';
   Coche1 = new Car(
     'https://i.pinimg.com/564x/28/55/ec/2855ecb2332a00a084ea305d85841a36.jpg',
     'Seat',
@@ -41,7 +41,7 @@ export class AppComponent {
     '01-2019',
     14199
   );
-    Coche5 = new Car(
+  Coche5 = new Car(
     'https://d3lp4xedbqa8a5.cloudfront.net/s3/digital-cougar-assets/whichcar/2020/06/16/-1/2021-Ford-Mustang-Mach-1.jpg',
     'Ford',
     'Mustang',
@@ -50,5 +50,11 @@ export class AppComponent {
     27155
   );
 
-  cars: Car[] = [this.Coche1, this.Coche2, this.Coche3, this.Coche4, this.Coche5];
+  cars: Car[] = [
+    this.Coche1,
+    this.Coche2,
+    this.Coche3,
+    this.Coche4,
+    this.Coche5,
+  ];
 }
