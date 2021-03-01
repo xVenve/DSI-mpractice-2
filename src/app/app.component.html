@@ -6,12 +6,11 @@
   </div>
 
   <div>
-    <p>
-      Filtrar por:
-      <input type="search" placeholder="(marca de coche)" />
+    <p> Filtrar por:
+      <input type="search" placeholder="(marca de coche)" [(ngModel)]="brandToFilter">
     </p>
-
-    <table border="1" frame="void" rules="rows">
+     
+    <table>
       <tr>
         <th>Foto</th>
         <th>Marca</th>
@@ -22,7 +21,7 @@
         <th>PVP</th>
         <th>Acciones</th>
       </tr>
-      <tr *ngFor="let car of cars">
+      <tr *ngFor="let car of cars | filtro: brandToFilter">
         <td><img src="{{ car.pic }}" id="carpic" /></td>
         <td>{{ car.brand }}</td>
         <td>{{ car.model }}</td>
@@ -35,7 +34,6 @@
           <button type="button">Vendido</button>
         </td>
       </tr>
-      <p></p>
     </table>
   </div>
 </div>
