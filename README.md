@@ -34,7 +34,7 @@
   - [x] Modelo siempre en MINUSCULAS.
   - [x] Año (solo presentará el AÑO de la fecha de compra).
   - [x] En venta desde (presentará MES y AÑO de la fecha en que se pone en venta).
-  - [x] Precio y PVP se presentarán sin decimales, y con “,” de millares. Seguido de €.
+  - [ ] Precio y PVP se presentarán sin decimales, y con “,” de millares. Seguido de €.
 
 - [ ] Trabajando con directivas Angular: ngIf, ngClass y ngFor
 

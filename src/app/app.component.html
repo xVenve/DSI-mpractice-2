@@ -27,8 +27,8 @@
         <td>{{ car.model | lowercase}}</td>
         <td>{{ car.year.getFullYear() }}</td>
         <td>{{ car.dateOnSale.getMonth()+"-"+car.dateOnSale.getFullYear() }}</td>
-        <td>{{ car.price | currency: "EUR":"symbol":"1.0-0":"en" }}</td>
-        <td>{{ car.price * 1.21 | currency: "EUR":"symbol":"1.0-0":"en" }}</td>
+        <td>{{ car.price | currency: "EUR":"symbol":"1.0-0":"es" }}</td>
+        <td>{{ car.price * 1.21 | currency: "EUR":"symbol":"1.0-0":"es" }}</td>
         <td id="tableButtons">
           <button type="button">Rebajar</button>
           <button type="button">Vendido</button>
