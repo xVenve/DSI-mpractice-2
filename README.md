@@ -4,10 +4,10 @@
 
 - [x] La pantalla muestra una lista de coches y, para cada uno, muestra diferentes campos de información.
 - [x] Si el usuario escribe algo en el campo FILTRO, se mostrarán solo los vehículos cuya Marca empiece por los caracteres escritos por el usuario. Así, en el ejemplo si escribe “R” solo se mostrarán los vehículos Renault.
-- [ ] Si pulsamos REBAJAR el precio del vehículo se multiplicará por 0,90.
-- [ ] Si pulsamos VENDIDO el vehículo desaparecerá de la lista.
+- [x] Si pulsamos REBAJAR el precio del vehículo se multiplicará por 0,90.
+- [x] Si pulsamos VENDIDO el vehículo desaparecerá de la lista.
 - [x] El PVP es el Precio x 1,21.
-- [ ] Si el estado del vehículo es BUENO, el precio se presentará en fondo VERDE. En caso contrario, en ROJO.
+- [x] Si el estado del vehículo es BUENO, el precio se presentará en fondo VERDE. En caso contrario, en ROJO.
 
 ## INTRUCCIONES PARA AFRONTAR LAMICROPRÁCTICA
 
@@ -19,14 +19,14 @@
 
  Para crearlo: ng g class coche
 
-- [ ] Campos de Coche:
+- [x] Campos de Coche:
 
   - [x] marca, modelo y foto (puede ser =””) → tipo string.
   - [x] fecha_modelo y fecha_venta → date
   - [x] precio → number
-  - [ ] estado → EstadoCoche
+  - [x] estado → EstadoCoche
   - [ ] getPVP():number → devuelve precio * 1,21
-  - [ ] enum EstadoCoche {BUENO, MALO}
+  - [x] enum EstadoCoche {BUENO, MALO}
 
 - [x] Trabajando con PIPEs:
 
@@ -36,10 +36,10 @@
   - [x] En venta desde (presentará MES y AÑO de la fecha en que se pone en venta).
   - [ ] Precio y PVP se presentarán sin decimales, y con “,” de millares. Seguido de €.
 
-- [ ] Trabajando con directivas Angular: ngIf, ngClass y ngFor
+- [x] Trabajando con directivas Angular: ngIf, ngClass y ngFor
 
-  - Si coche.foto==’’ → presentar texto: (sin foto!)
-  - Si coche.estado==CocheEstado.BUENO →fondo verde (esto se hace con ngClass).  
+  - [x] Si coche.foto==’’ → presentar texto: (sin foto!)
+  - [x] Si coche.estado==CocheEstado.BUENO →fondo verde (esto se hace con ngClass).  
 
 ## SUGERENCIA
 
