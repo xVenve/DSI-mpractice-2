@@ -30,10 +30,9 @@
         <td>{{ car.model | lowercase}}</td>
         <td>{{ car.year.getFullYear() }}</td>
         <td>{{ car.dateOnSale.getMonth()+"-"+car.dateOnSale.getFullYear() }}</td>
-        <td>{{ car.price | currency: "EUR":"symbol":"1.0-0":"es" }}</td>
+        <td>{{ car.price | number: "1.0-0"}} €</td>
         <td>
-          <div [ngClass]="isGoodCondition(car.condition)?'good':'bad'">{{ car.price * 1.21 | currency:
-            "EUR":"symbol":"1.0-0":"es" }}</div>
+          <div [ngClass]="isGoodCondition(car.condition)?'good':'bad'">{{ car.price * 1.21 | number: "1.0-0" }} €</div>
         </td>
         <td id="tableButtons">
           <button type="button" (click)="car.lower()">Rebajar</button>
