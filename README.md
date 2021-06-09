@@ -1,67 +1,67 @@
-# Practica02
+## DSI Practice 2
 
-## FUNCIONAMIENTO DEL INTERFACE GRÁFICO
+## GRAPHICAL INTERFACE OPERATION
 
-- [x] La pantalla muestra una lista de coches y, para cada uno, muestra diferentes campos de información.
-- [x] Si el usuario escribe algo en el campo FILTRO, se mostrarán solo los vehículos cuya Marca empiece por los caracteres escritos por el usuario. Así, en el ejemplo si escribe “R” solo se mostrarán los vehículos Renault.
-- [x] Si pulsamos REBAJAR el precio del vehículo se multiplicará por 0,90.
-- [x] Si pulsamos VENDIDO el vehículo desaparecerá de la lista.
-- [x] El PVP es el Precio x 1,21.
-- [x] Si el estado del vehículo es BUENO, el precio se presentará en fondo VERDE. En caso contrario, en ROJO.
+- [x] The screen shows a list of cars and, for each one, displays different information fields.
+- [x] If the user types something in the FILTER field, only the vehicles whose Make begins with the characters typed by the user will be displayed. So, in the example, if the user types "R" only Renault vehicles will be shown.
+- [x] If we click on REDUCE the price of the vehicle will be multiplied by 0.90.
+- [x] If we click on SOLD the vehicle will disappear from the list.
+- [x] The PVP is the Price x 1,21.
+- [x] If the condition of the vehicle is GOOD, the price will be displayed in GREEN background. Otherwise, in RED.
 
-## INTRUCCIONES PARA AFRONTAR LAMICROPRÁCTICA
+## INSTRUCTIONS TO DEAL WITH THE MICROPRACTICE
 
-- [x] Crear una nueva aplicación Angular (en repositorio local en tu PC):
+- [x] Create a new Angular application (in local repository on your PC):
 
-  - ng new micropractica02
+  - ng new micropractice02
 
-- [x] El modelo de datos, en esta ocasión, lo vamos a almacenar en una CLASS personalizada llamada Coche. Esta clase se definirá en un archivo llamado: coche.ts.
+- [x] The data model, this time, we are going to store it in a custom CLASS called Car. This class will be defined in a file called: coche.ts.
 
- Para crearlo: ng g class coche
+ To create it: ng g class car
 
-- [x] Campos de Coche:
+- [x] Car fields:
 
-  - [x] marca, modelo y foto (puede ser =””) → tipo string.
-  - [x] fecha_modelo y fecha_venta → date
-  - [x] precio → number
-  - [x] estado → EstadoCoche
-  - [ ] getPVP():number → devuelve precio * 1,21
-  - [x] enum EstadoCoche {BUENO, MALO}
+  - [x] make, model and picture (can be ="") → string type.
+  - [x] model_date and sale_date → date.
+  - [x] price → number
+  - [x] status → car_status
+  - [x] getPVP():number → return price * 1,21
+  - [x] enum CarStatus {GOOD, BAD}
 
-- [x] Trabajando con PIPEs:
+- [x] Working with PIPEs:
 
-  - [x] Marca se presentará siempre en MAYUSCULAS.
-  - [x] Modelo siempre en MINUSCULAS.
-  - [x] Año (solo presentará el AÑO de la fecha de compra).
-  - [x] En venta desde (presentará MES y AÑO de la fecha en que se pone en venta).
-  - [ ] Precio y PVP se presentarán sin decimales, y con “,” de millares. Seguido de €.
+  - [x] Make will always be presented in CAPITALS.
+  - [x] Model will always be in MINUSCRIPLES.
+  - [x] Year (only the YEAR of the date of purchase shall be presented).
+  - [x] On sale since (present MONTH and YEAR of the date it was put on sale).
+  - [x] Price and RRP shall be presented without decimals, and with "," for thousands. Followed by €.
 
-- [x] Trabajando con directivas Angular: ngIf, ngClass y ngFor
+- [x] Working with Angular directives: ngIf, ngClass and ngFor.
 
-  - [x] Si coche.foto==’’ → presentar texto: (sin foto!)
-  - [x] Si coche.estado==CocheEstado.BUENO →fondo verde (esto se hace con ngClass).  
+  - [x] If car.photo=='' → present text: (no photo!)
+  - [x] If car.state==CarState.GOOD → green background (this is done with ngClass).  
 
-## SUGERENCIA
+## TIP
 
-- Para implementar el FILTRADO se puede hacer de diferentes formas. Una fácil, es crear una función que devuelva una lista de ID (números, índices de coches en la lista de coches) que cumplan la condición de que su campo Marca empiece por la subcadena que escriba el usuario en Filtro.
-- Así, el TEMPLATE tendría esta pinta: <tr *ngFor=’let id of getFiltrados();’> e, iríamos accediendo a cada elemento así: {{coches[id].marca}}, etc...
-- De esta forma, tendríamos disponible para procesar los botones VENDIDO y REBAJAR, el campo ID que es el índice de la lista de coches totales (sin filtrar). Esto nos puede ser muy útil para saber cual borrar o rebajar.
+- To implement FILTERING you can do it in different ways. An easy one, is to create a function that returns a list of IDs (numbers, car indexes in the car list) that meet the condition that their Make field starts with the substring typed by the user in Filter.
+- So, the TEMPLATE would look like this: <tr *ngFor='let id of getFiltered();'> and, we would access each element like this: {{cars[id].brand}}, etc....
+- In this way, we would have available to process the SOLD and REDUCE buttons, the ID field that is the index of the total cars list (without filtering). This can be very useful to know which one to delete or downgrade.
 
-## INICIALIZACIÓN DEL MODELO
+## MODEL INITIALIZATION
 
-Como mínimo, hay que definir dos variables en el modelo:
+At least two variables must be defined in the model:
 
-public EstadoCoche:any = EstadoCoche; // ESTA LINEA SOLO SIRVE PARA PODER USAR EstadoCoche en el TEMPLATE.
+public EstadoCoche:any = EstadoCoche; // THIS LINE ONLY SERVES SO WE CAN USE EstadoCoche in the TEMPLATE.
 
-public coches:Array<Coche>=[ new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'coche01.jpg',EstadoCoche.BUENO),  new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'coche01.jpg',EstadoCoche.BUENO), new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'coche01.jpg',EstadoCoche.BUENO)]
+public cars:Array<Car>=[ new Car('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'car01.jpg',CarStatus.GOOD), new Car('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'car01. jpg',CarStatus.GOOD), new Car('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'car01.jpg',CarStatus.GOOD)]
 
-Se define un array de tipo Coche, con valores introducidos “hard code”.  
+An array of type Car is defined, with values entered "hard code".  
 
-## Deploy en GitHub Pages
+## Deploy in GitHub Pages
 
-No hace falta crear la rama, se crea sola.
+No need to create the branch, it creates itself.
 
-Una vez creado el repositorio con todo en GitHub.
+Once the repository is created with everything in GitHub.
 
 ```terminal
 ng add angular-cli-ghpages

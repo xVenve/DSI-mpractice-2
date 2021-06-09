@@ -12,9 +12,9 @@ export enum carCondition {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Concesionario';
+  title = 'Authorized Dealer';
   brandToFilter = '';
-  Coche1 = new Car(
+  Car1 = new Car(
     'https://i.pinimg.com/564x/28/55/ec/2855ecb2332a00a084ea305d85841a36.jpg',
     'Seat',
     'Ibiza',
@@ -23,7 +23,7 @@ export class AppComponent {
     1200,
     carCondition.BAD
   );
-  Coche2 = new Car(
+  Car2 = new Car(
     '', //'https://avtotachki.com/wp-content/uploads/2020/05/citroen-c3-1-2-puretech-68-l-s-5-mkp-1.jpg',
     'Citroen',
     'C3',
@@ -32,7 +32,7 @@ export class AppComponent {
     10499,
     carCondition.BAD
   );
-  Coche3 = new Car(
+  Car3 = new Car(
     'https://cars.usnews.com/static/images/Auto/izmo/i159614145/2021_hyundai_kona_angularfront.jpg',
     'Hyundai',
     'Kona',
@@ -41,7 +41,7 @@ export class AppComponent {
     14399,
     carCondition.GOOD
   );
-  Coche4 = new Car(
+  Car4 = new Car(
     'https://www.lloydmotorgroup.com/ImageLibrary/Vehicle/526629-LwY3ZPABjEGguuRwf8sBNw.jpg',
     'Ford',
     'Fiesta',
@@ -50,7 +50,7 @@ export class AppComponent {
     14199,
     carCondition.GOOD
   );
-  Coche5 = new Car(
+  Car5 = new Car(
     'https://d3lp4xedbqa8a5.cloudfront.net/s3/digital-cougar-assets/whichcar/2020/06/16/-1/2021-Ford-Mustang-Mach-1.jpg',
     'Ford',
     'Mustang',
@@ -61,11 +61,11 @@ export class AppComponent {
   );
 
   cars: Car[] = [
-    this.Coche1,
-    this.Coche2,
-    this.Coche3,
-    this.Coche4,
-    this.Coche5,
+    this.Car1,
+    this.Car2,
+    this.Car3,
+    this.Car4,
+    this.Car5,
   ];
 
   public sold(i: number) {

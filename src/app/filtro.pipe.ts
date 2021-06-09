@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Car } from './car';
 
 @Pipe({
-  name: 'filtro',
+  name: 'filter',
 })
 export class FiltroPipe implements PipeTransform {
   transform(value: Car[], input: string): Car[] {
