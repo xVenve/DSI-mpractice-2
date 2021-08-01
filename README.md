@@ -1,4 +1,8 @@
-## DSI Practice 2
+# DSI Practice 2
+
+![W3C Validation](https://img.shields.io/w3c-validation/html?preset=HTML%2C%20SVG%201.1%2C%20MathML%203.0&targetUrl=https%3A%2F%2Fxvenve.github.io%2FDSI-mpractice-2%2F)
+![GitHub top language](https://img.shields.io/github/languages/top/xVenve/DSI-mpractice-2)
+![GitHub repo size](https://img.shields.io/github/repo-size/xVenve/DSI-mpractice-2)
 
 ## GRAPHICAL INTERFACE OPERATION
 
